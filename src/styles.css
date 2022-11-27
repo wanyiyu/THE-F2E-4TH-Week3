@@ -1,0 +1,1190 @@
+@charset "UTF-8";
+
+:root {
+    --bs-white: #FFFFFF;
+    --bs-yellow: #FFD33F;
+    --bs-blue: #1A64FB;
+    --bs-blue-dark: #002B78;
+    --bs-red: #E32E2B;
+    --bs-red-dark: #780700;
+    --bs-gray-light: #F3EEE9;
+    --bs-gray: #9E9D9C;
+    --bs-gray-dark: #454545;
+
+    --bs-white-rgb: 255, 255, 255;
+    --bs-yellow-rgb: 255, 211, 63;
+    --bs-blue-rgb: 26, 100, 251;
+    --bs-blue-dark-rgb: 0, 43, 120;
+    --bs-red-rgb: 227, 46, 43;
+    --bs-red-dark-rgb: 120, 7, 0;
+    --bs-gray-light-rgb: 243, 238, 233;
+    --bs-gray-rgb: 158, 157, 156;
+    --bs-gray-dark-rgb: 69, 69, 69;
+
+    --bs-font-sans-serif: "jf-openhuninn-1.1", "851CHIKARA-YOWAKU", system-ui, -apple-system, "Segoe UI", "Noto Sans", Roboto, "Helvetica Neue", Arial, "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-bg-opacity: 1;
+    --bs-bg-opacity-half: 0.5;
+    --bs-bg-opacity-none: 0;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-color: #FFFFFF;
+    --bs-body-bg: #454545;
+}
+
+
+body {
+    height: auto;
+    overflow: hidden;
+}
+
+.text-gray {
+    color: var(--bs-gray);
+}
+
+.text-gray-dark {
+    color: var(--bs-gray-dark);
+}
+
+.clock {
+    width: 10rem;
+
+}
+
+.clock-1 {
+    opacity: 0.1;
+    transform: rotate(30deg);
+    width: 10vw;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+
+.clock-2 {
+    opacity: 0.2;
+    transform: rotate(-30deg);
+    width: 20vw;
+    position: absolute;
+    top: -10%;
+    right: 20%;
+}
+
+.clock-3 {
+    opacity: 0.2;
+    transform: rotate(-30deg);
+    width: 20vw;
+    position: absolute;
+    top: 30%;
+    left: -5%;
+}
+
+.clock-4 {
+    opacity: 0.2;
+    transform: rotate(-30deg);
+    width: 20vw;
+    position: absolute;
+    top: 30%;
+    right: -5%;
+}
+
+.clock-5 {
+    opacity: 0.2;
+    transform: rotate(-30deg);
+    width: 20vw;
+    position: absolute;
+    bottom: -10%;
+    left: 20%;
+}
+
+.clock-6 {
+    opacity: 0.1;
+    transform: rotate(30deg);
+    width: 10vw;
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "KFhimaji";
+    letter-spacing: 5px;
+}
+
+h1,
+.h1 {
+    font-size: 4rem;
+}
+
+h2,
+.h2 {
+    font-size: 3rem;
+}
+
+h3,
+.h3 {
+    font-size: 2.75rem;
+}
+
+h4,
+.h4 {
+    font-size: 2rem;
+}
+
+h5,
+.h5 {
+    font-size: 1.25rem;
+}
+
+p,
+.p {
+    font-size: 0.5rem;
+}
+
+content {
+    font-size: 0.75rem;
+    line-height: 0.1rem;
+}
+
+
+.ribbon {
+    color: var(--bs-gray-dark);
+    width: 100vw;
+    height: 2rem;
+    background: var(--bs-yellow);
+}
+
+.ribbon h5 {
+    line-height: 2rem;
+    overflow-x: hidden;
+}
+
+.ribbon-t {
+    position: absolute;
+    top: 0;
+}
+
+.ribbon-b {
+    position: absolute;
+    bottom: 0;
+}
+
+.ribbon:before,
+.ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 1rem solid var(--bs-yellow);
+    z-index: -1;
+}
+
+.ribbon:before {
+    left: -20px;
+    border-right-width: 33px;
+    border-left-color: transparent;
+}
+
+.ribbon:after {
+    right: -20px;
+    border-left-width: 33px;
+    border-right-color: transparent;
+}
+
+.po {
+    transform: rotateY(180deg);
+    width: 15rem;
+    position: absolute;
+    left: -15%;
+    bottom: -5%;
+    z-index: -2;
+}
+
+.po-main {
+    width: 15rem;
+}
+
+.po-part1 {
+    transform: rotateY(180deg);
+    width: 15rem;
+    position: absolute;
+    left: 2%;
+    top: 10%;
+    z-index: -2;
+}
+
+.po-drag1 {
+    width: 15rem;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+
+.newbie {
+    width: 15rem;
+    position: absolute;
+    right: -15%;
+    bottom: -7%;
+    z-index: -2;
+}
+
+.point {
+    transform: rotateY(180deg);
+    width: 2rem;
+    position: absolute;
+    right: 8rem;
+    bottom: 8rem;
+}
+
+.start {
+    border-radius: 25px;
+    background-color: rgba(var(--bs-gray-light-rgb), var(--bs-bg-opacity-half)) !important;
+    height: 2rem;
+    width: auto;
+    color: var(--bs-yellow)
+}
+
+.start h5 {
+    line-height: 2rem;
+}
+
+.start:hover h5,
+.accept:hover p,
+.go1-btn:hover p,
+.done1-btn:hover p,
+.go2-btn:hover p,
+.pass-btn:hover p {
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+}
+
+.pad2 {
+    width: 80%;
+    position: absolute;
+    bottom: 0%;
+}
+
+.pad-introduce {
+    color: var(--bs-gray-dark);
+    background-image: url(../assets/image/pad2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 20rem;
+    height: 15rem;
+    position: absolute;
+    bottom: 0%;
+    padding: 5rem 2rem;
+}
+
+.accept,
+.go1,
+.done1 {
+    font-family: "851CHIKARA-YOWAKU";
+}
+
+.talking-frame {
+    border: black 2px solid;
+    background-color: var(--bs-gray);
+    position: absolute;
+    bottom: 5%;
+}
+
+.talking-content {
+    border: black 2px solid;
+    height: 12rem;
+    background-color: var(--bs-gray-light);
+    margin: 0.5rem 0;
+    color: var(--bs-gray-dark);
+    padding: 1rem;
+    overflow-y: hidden
+}
+
+.talking-btn {
+    color: var(--bs-gray-dark);
+    position: absolute;
+    bottom: 10%;
+}
+
+.again1-btn,
+.again2-btn,
+.again4-btn,
+.again5-btn {
+    color: var(--bs-gray);
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: auto;
+}
+
+.bla {
+    opacity: 0.6;
+    transform: rotate(20deg);
+    width: 5rem;
+    position: absolute;
+    top: 5rem;
+    left: 13rem;
+}
+
+/* drag-page - not RWD*/
+.pad-drag1 {
+    color: var(--bs-gray-dark);
+    background-image: url(../assets/image/pad.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30rem;
+    height: 100%;
+    position: absolute;
+    bottom: 0%;
+    padding: 1rem 1rem;
+}
+
+.drag1-category {
+    color: var(--bs-gray);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin: auto;
+    transform: scale(0.7);
+    transform-origin: left;
+}
+
+.drag1-title {
+    font-size: 0.75rem;
+    margin: auto;
+    background-color: rgba(var(--bs-gray-light-rgb), var(--bs-bg-opacity-half));
+}
+
+.dropContainer {
+
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.drag-title {
+    color: var(--bs-white);
+    font-size: 0.75rem;
+    margin: auto;
+    line-height: 0.75rem;
+
+}
+
+.drag-text {
+    color: var(--bs-white);
+    font-size: 0.75rem;
+    margin: auto;
+    line-height: 0.75rem;
+    transform: scale(0.7);
+
+}
+
+.draggble-frame {
+    padding: 0.3rem;
+    background-color: var(--bs-blue);
+    border-radius: 5px;
+}
+
+.draggble {
+    padding: 0.5rem;
+    background-color: var(--bs-blue);
+    border: 3px solid var(--bs-white);
+    border-radius: 5px;
+}
+
+.productBacklog {
+    height: 18.5rem;
+    overflow: hidden;
+
+}
+
+.drop-bg {
+
+    background-image: url(../assets/image/drop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20rem;
+    background-color: var(--bs-blue);
+
+    border-top-left-radius: 12px 12px;
+    border-bottom-left-radius: 12px 12px;
+
+    position: relative;
+}
+
+.drop-hint-text {
+    color: var(--bs-gray);
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+}
+
+.drop-hint-right {
+    background-color: var(--bs-blue);
+    border-top-right-radius: 12px 12px;
+    border-bottom-right-radius: 12px 12px;
+    background-image: url(../assets/image/drophint.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20rem;
+    text-align: center;
+}
+
+.done1-btn {
+    width: auto;
+    margin-top: 50%;
+    background-color: rgba(var(--bs-gray-light-rgb), var(--bs-bg-opacity-half));
+    border-radius: 5px;
+    line-height: 1rem;
+}
+
+.drag1-caption {
+    position: fixed;
+    top: 90%;
+    background-color: rgba(var(--bs-gray-light-rgb), var(--bs-bg-opacity-half));
+    z-index: 4;
+}
+
+.continue2 {
+    font-size: 0.75rem;
+    color: var(--bs-gray);
+}
+
+.master {
+    transform: rotateY(180deg);
+    width: 14rem;
+    position: absolute;
+    right: 0%;
+    top: 12%;
+    z-index: -2;
+}
+
+.dev1 {
+    width: 14rem;
+    position: absolute;
+    left: 3%;
+    top: 15%;
+    z-index: -2;
+}
+
+.dev2 {
+    width: 14rem;
+    position: absolute;
+    left: -5%;
+    top: 0%;
+    z-index: -2;
+}
+
+.dev1-2 {
+    width: 14rem;
+    position: absolute;
+    left: 0%;
+    top: 12%;
+    z-index: -2;
+}
+
+.dev2-2 {
+    width: 14rem;
+    position: absolute;
+    right: 0%;
+    top: 12%;
+    z-index: -2;
+}
+
+/* drag2-page - not RWD*/
+.pad-drag2 {
+    color: var(--bs-gray-dark);
+    background-image: url(../assets/image/pad.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 20rem;
+    height: 15rem;
+    position: absolute;
+    bottom: 0%;
+    padding: 5rem 2rem;
+}
+
+.po-drag2 {
+    width: 10rem;
+    position: absolute;
+    right: 0%;
+    top: 15%;
+    z-index: -2;
+}
+
+.master-drag2 {
+    transform: rotateY(180deg);
+    width: 10rem;
+    position: absolute;
+    right: 20%;
+    top: 5%;
+    z-index: -2;
+}
+
+.dev1-drag2 {
+    width: 10rem;
+    position: absolute;
+    left: 0%;
+    top: 15%;
+    z-index: -2;
+}
+
+.dev2-drag2 {
+    transform: rotateY(180deg);
+    width: 10rem;
+    position: absolute;
+    left: 20%;
+    top: 5%;
+    z-index: -2;
+}
+
+.bla-drag2 {
+    opacity: 0.6;
+    transform: rotate(-20deg);
+    width: 3rem;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+}
+
+.bla-drag2-2 {
+    opacity: 0.6;
+    width: 3rem;
+    position: absolute;
+    right: 15%;
+    top: 5%;
+}
+
+/* End */
+.restart-btn {
+    color: var(--bs-gray);
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: auto;
+}
+
+.end-flag {
+    position: absolute;
+    bottom: 0%;
+    width: 100vw;
+}
+
+.flag {
+    background-color: var(--bs-yellow);
+    height: 2rem;
+    color: var(--bs-gray-dark);
+
+}
+
+.flag h5 {
+    line-height: 2rem;
+}
+
+.flag-title {
+    background-color: var(--bs-red-dark);
+    height: auto;
+    padding: 3rem;
+}
+
+.po-end {
+    width: 10rem;
+    position: absolute;
+    right: 0%;
+    top: 30%;
+    z-index: -2;
+}
+
+.master-end {
+    transform: rotateY(180deg);
+    width: 10rem;
+    position: absolute;
+    right: 20%;
+    top: 20%;
+    z-index: -2;
+}
+
+.dev1-end {
+    width: 12rem;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%);
+    z-index: -2;
+}
+
+.dev2-end {
+    transform: rotateY(180deg);
+    width: 12rem;
+    position: absolute;
+    left: 15%;
+    top: 15%;
+    z-index: -2;
+}
+
+.newbie-end {
+    transform: rotateY(180deg);
+    width: 10rem;
+    position: absolute;
+    left: 0%;
+    top: 30%;
+    z-index: -2;
+}
+
+.bla-end {
+    opacity: 0.6;
+    transform: rotate(-20deg);
+    width: 4rem;
+    position: absolute;
+    left: 15%;
+    top: 15%;
+}
+
+.bla-end-2 {
+    transform: rotate(10deg);
+    opacity: 0.6;
+    width: 4rem;
+    position: absolute;
+    left: 45%;
+    top: 10%;
+}
+
+.bla-end-3 {
+    transform: rotate(20deg);
+    opacity: 0.6;
+    width: 4rem;
+    position: absolute;
+    right: 10%;
+    top: 18%;
+}
+
+.point-end {
+    transform: rotateY(180deg);
+    width: 2rem;
+    position: absolute;
+    left: 5%;
+    bottom: 45%;
+}
+
+.point-end-2 {
+    transform: rotate(30deg);
+    width: 2rem;
+    position: absolute;
+    right: 5%;
+    bottom: 45%;
+}
+
+/* Tablet */
+@media (min-width: 576px) {
+
+    p,
+    .p {
+        font-size: 1.25rem;
+    }
+
+    content {
+        font-size: 1rem;
+    }
+
+    .clock {
+        width: 20rem;
+    }
+
+    .clock-2 {
+        top: -20%;
+    }
+
+    .clock-5 {
+        bottom: -20%;
+    }
+
+    .po {
+        transform: rotateY(180deg);
+        width: 20rem;
+        position: absolute;
+        left: -10%;
+        bottom: -5%;
+        z-index: -2;
+    }
+
+    .newbie {
+        width: 20rem;
+        position: absolute;
+        right: -10%;
+        bottom: -7%;
+        z-index: -2;
+    }
+
+    .point {
+        transform: rotateY(180deg);
+        width: 2.5rem;
+        position: absolute;
+        right: 12rem;
+        bottom: 12rem;
+    }
+
+    .start {
+        background-color: transparent !important;
+        width: auto;
+        color: var(--bs-yellow)
+    }
+
+    .pad-introduce {
+        color: var(--bs-gray-dark);
+        background-image: url(../assets/image/pad2.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 40rem;
+        height: 30rem;
+        position: absolute;
+        bottom: 0%;
+        padding: 10rem 2rem;
+    }
+
+    .talking-content {
+        border: black 2px solid;
+        height: 12rem;
+        background-color: var(--bs-gray-light);
+        margin: 0.5rem 0;
+        color: var(--bs-gray-dark);
+        padding: 1.5rem;
+        letter-spacing: 2px;
+        overflow-y: hidden
+    }
+
+    .po-part1 {
+        transform: rotateY(180deg);
+        width: 20rem;
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        z-index: -2;
+    }
+
+    .bla {
+        opacity: 0.6;
+        transform: rotate(20deg);
+        width: 7rem;
+        position: absolute;
+        top: 4rem;
+        left: 20rem;
+    }
+
+    /* drag1 - not RWD */
+    .pad-drag1 {
+        color: var(--bs-gray-dark);
+        background-image: url(../assets/image/pad.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 50rem;
+        height: 33rem;
+        position: absolute;
+        bottom: 0%;
+        padding: 9rem 10rem;
+    }
+
+    .drag1-caption {
+        position: fixed;
+        top: 5%;
+        background-color: transparent;
+        z-index: 4;
+    }
+
+    .drag1-title {
+        font-size: 0.75rem;
+        margin: auto;
+    }
+
+    .done1-btn {
+        margin-top: 50%;
+    }
+
+    .master {
+        transform: rotateY(180deg);
+        width: 18rem;
+        position: absolute;
+        right: 10%;
+        top: 6%;
+        z-index: -2;
+    }
+
+    .dev1 {
+        width: 18rem;
+        position: absolute;
+        left: 20%;
+        top: 5%;
+        z-index: -2;
+    }
+
+    .dev2 {
+        width: 18rem;
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        z-index: -2;
+    }
+
+    .dev1-2 {
+        width: 18rem;
+        position: absolute;
+        left: 10%;
+        top: 5%;
+        z-index: -2;
+    }
+
+    .dev2-2 {
+        width: 18rem;
+        position: absolute;
+        right: 10%;
+        top: 5%;
+        z-index: -2;
+    }
+
+    /* drag2 - not RWD */
+    .pad-drag2 {
+        color: var(--bs-gray-dark);
+        background-image: url(../assets/image/pad.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 40rem;
+        height: 30rem;
+        position: absolute;
+        bottom: 0%;
+        padding: 10rem 2rem;
+    }
+
+    .po-drag2 {
+        width: 12rem;
+        position: absolute;
+        right: 10%;
+        top: 15%;
+        z-index: -2;
+    }
+
+    .master-drag2 {
+        transform: rotateY(180deg);
+        width: 12rem;
+        position: absolute;
+        right: 30%;
+        top: 5%;
+        z-index: -2;
+    }
+
+    .dev1-drag2 {
+        width: 12rem;
+        position: absolute;
+        left: 10%;
+        top: 15%;
+        z-index: -2;
+    }
+
+    .dev2-drag2 {
+        transform: rotateY(180deg);
+        width: 12rem;
+        position: absolute;
+        left: 25%;
+        top: 5%;
+        z-index: -2;
+    }
+
+    .bla-drag2 {
+        opacity: 0.6;
+        transform: rotate(-20deg);
+        width: 4rem;
+        position: absolute;
+        left: 28%;
+        top: 10%;
+    }
+
+    .bla-drag2-2 {
+        opacity: 0.6;
+        width: 4rem;
+        position: absolute;
+        right: 28%;
+        top: 6%;
+    }
+
+    /*End*/
+    .po-end {
+        width: 15rem;
+        position: absolute;
+        right: 5%;
+        top: 25%;
+        z-index: -2;
+    }
+
+    .master-end {
+        transform: rotateY(180deg);
+        width: 15rem;
+        position: absolute;
+        right: 20%;
+        top: 10%;
+        z-index: -2;
+    }
+
+    .dev1-end {
+        /* transform: rotateY(180deg); */
+        width: 17rem;
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%);
+        z-index: -2;
+    }
+
+    .dev2-end {
+        transform: rotateY(180deg);
+        width: 17rem;
+        position: absolute;
+        left: 20%;
+        top: 5%;
+        z-index: -2;
+    }
+
+    .newbie-end {
+        transform: rotateY(180deg);
+        width: 15rem;
+        position: absolute;
+        left: 8%;
+        top: 25%;
+        z-index: -2;
+    }
+
+    .bla-end {
+        opacity: 0.6;
+        transform: rotate(-20deg);
+        width: 4rem;
+        position: absolute;
+        left: 20%;
+        top: 12%;
+    }
+
+    .bla-end-2 {
+        transform: rotate(10deg);
+        opacity: 0.6;
+        width: 4rem;
+        position: absolute;
+        left: 50%;
+        top: 8%;
+    }
+
+    .bla-end-3 {
+        transform: rotate(20deg);
+        opacity: 0.6;
+        width: 4rem;
+        position: absolute;
+        right: 15%;
+        top: 15%;
+    }
+
+    .point-end {
+        transform: rotateY(180deg);
+        width: 2rem;
+        position: absolute;
+        left: 12%;
+        bottom: 45%;
+    }
+
+    .point-end-2 {
+        transform: rotate(30deg);
+        width: 2rem;
+        position: absolute;
+        right: 12%;
+        bottom: 45%;
+    }
+}
+
+/* Desktop & Tablet */
+@media (min-width: 768px) {
+
+    h1,
+    .h1 {
+        font-size: 5rem;
+    }
+
+    h2,
+    .h2 {
+        font-size: 4rem;
+    }
+
+    h3,
+    .h3 {
+        font-size: 3.75rem;
+    }
+
+    h4,
+    .h4 {
+        font-size: 2.25rem;
+
+    }
+
+    .po {
+        transform: rotateY(180deg);
+        width: 25rem;
+        position: absolute;
+        left: -10%;
+        bottom: -5%;
+        z-index: -2;
+    }
+
+    .newbie {
+        width: 25rem;
+        position: absolute;
+        right: -10%;
+        bottom: -7%;
+        z-index: -2;
+    }
+
+    .point {
+        transform: rotateY(180deg);
+        width: 3rem;
+        position: absolute;
+        right: 15rem;
+        bottom: 15rem;
+    }
+
+    .po-drag2 {
+        width: 15rem;
+        position: absolute;
+        right: 15%;
+        top: 15%;
+        z-index: -2;
+    }
+
+    .master-drag2 {
+        transform: rotateY(180deg);
+        width: 15rem;
+        position: absolute;
+        right: 30%;
+        top: 5%;
+        z-index: -2;
+    }
+
+    .dev1-drag2 {
+        width: 15rem;
+        position: absolute;
+        left: 15%;
+        top: 15%;
+        z-index: -2;
+    }
+
+    .dev2-drag2 {
+        transform: rotateY(180deg);
+        width: 15rem;
+        position: absolute;
+        left: 30%;
+        top: 5%;
+        z-index: -2;
+    }
+
+    .bla-drag2 {
+        opacity: 0.6;
+        transform: rotate(-20deg);
+        width: 5rem;
+        position: absolute;
+        left: 30%;
+        top: 8%;
+    }
+
+    .bla-drag2-2 {
+        opacity: 0.6;
+        width: 5rem;
+        position: absolute;
+        right: 28%;
+        top: 5%;
+    }
+
+    /*End*/
+    .po-end {
+        width: 18rem;
+        position: absolute;
+        right: 5%;
+        top: 15%;
+        z-index: -2;
+    }
+
+    .master-end {
+        transform: rotateY(180deg);
+        width: 18rem;
+        position: absolute;
+        right: 25%;
+        top: 5%;
+        z-index: -2;
+    }
+
+    .dev1-end {
+        /* transform: rotateY(180deg); */
+        width: 20rem;
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translate(-50%);
+        z-index: -2;
+    }
+
+    .dev2-end {
+        transform: rotateY(180deg);
+        width: 20rem;
+        position: absolute;
+        left: 20%;
+        top: 0%;
+        z-index: -2;
+    }
+
+    .newbie-end {
+        transform: rotateY(180deg);
+        width: 18rem;
+        position: absolute;
+        left: 5%;
+        top: 15%;
+        z-index: -2;
+    }
+
+    .bla-end {
+        opacity: 0.6;
+        transform: rotate(-30deg);
+        width: 5rem;
+        position: absolute;
+        left: 15%;
+        top: 5%;
+    }
+
+    .bla-end-2 {
+        transform: rotate(10deg);
+        opacity: 0.6;
+        width: 5rem;
+        position: absolute;
+        left: 50%;
+        top: 5%;
+    }
+
+    .bla-end-3 {
+        transform: rotate(20deg);
+        opacity: 0.6;
+        width: 5rem;
+        position: absolute;
+        right: 10%;
+        top: 8%;
+    }
+
+    .point-end {
+        transform: rotateY(180deg);
+        width: 3rem;
+        position: absolute;
+        left: 15%;
+        bottom: 45%;
+    }
+
+    .point-end-2 {
+        transform: rotate(30deg);
+        width: 3rem;
+        position: absolute;
+        right: 15%;
+        bottom: 45%;
+    }
+}
